@@ -201,11 +201,11 @@ nav a:hover {
 
 /* FOOTER */
 .footer {
-  background: #ffffff;
+  background: #a5a5a5;
   color: #eee;
   padding: 50px 5% 20px;
   margin-top: 60px;
-  box-shadow: 0 -3px 10px rgba(0,0,0,0.12);  /* 🔥 BAYANGAN ATAS */
+  box-shadow: 0 -3px 10px rgba(158, 146, 146, 0.12);  /* 🔥 BAYANGAN ATAS */
 }
 
 
@@ -231,32 +231,32 @@ nav a:hover {
 
 .footer h3 {
   margin-bottom: 12px;
-  color: #e36d19; /* kuning orange biar match dengan nav active */
+  color: #ffffff; /* kuning orange biar match dengan nav active */
 }
 
 .footer p {
   margin-bottom: 8px;
-  color: #605757;
+  color: #ffffff;
 }
 
 .footer-center a {
   display: block;
   margin-bottom: 8px;
-  color: #605757;
+  color: #ffffff;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-center a:hover {
-  color: #e36d19;
+  color: #ffffff;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
   margin-top: 20px;
-  border-top: 1px solid #333;
-  color: #000000;
+  border-top: 1px solid #ffffff;
+  color: #ffffff;
   font-size: 14px;
 }
 
