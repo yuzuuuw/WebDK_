@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+  font-family: 'Comic Neue', cursive;
 }
 
 body {
@@ -508,4 +508,5 @@ header {
 }
  
  
+
 
