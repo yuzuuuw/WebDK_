@@ -316,7 +316,7 @@ nav a:hover {
 
   /* PRODUCTS RESPONSIVE */
   .product {
-    padding: 60px 25px;
+    padding: 90px 25px;
   }
 
   .product h2 {
@@ -420,7 +420,7 @@ nav a:hover {
 
   nav {
     position: absolute;
-    top: 65px;        /* JARAK DARI HEADER — fix */
+    top: 90px;        /* JARAK DARI HEADER — fix */
     right: 15px;      /* SUPAYA TIDAK MELEDAK KE KIRI */
     background: white;
     padding: 18px 20px;
@@ -508,5 +508,4 @@ header {
 }
  
  
-
 
