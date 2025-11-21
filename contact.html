@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DK Production | Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="Logo Production.png" alt="DK Production">
+    </div>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="index.html#about">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="burger" id="burgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h1>Hubungi Kami</h1>
+    <br>
+    <p class="contact-sub">Kami siap membantu kebutuhan desain, produksi, dan event kamu.</p>
+
+    <div class="contact-container">
+
+      <!-- Info Kiri -->
+      <div class="contact-info">
+        <h3>Informasi Kontak</h3>
+        <br>
+        <p><strong>Email:</strong> 
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hanakamila2007@gmail.com" 
+     target="_blank">
+     hanakamila2007@gmail.com
+  </a>
+</p>
+
+
+        <p><strong>WhatsApp:</strong> 
+        <a href="https://wa.me/6282113626066" target="_blank">+62 821-1362-6066</a>
+        </p>
+
+        <p><strong>Lokasi:</strong>Jl. Bakti Jaya Luk No.61, Bakti Jaya, Kec. Setu, Kota Tangerang Selatan, Banten 15416</p>
+
+        <a class="location-btn" onclick="openMap()">📌 Lihat Lokasi</a>
+      </div>
+
+      <!-- Form Kanan -->
+      <div class="contact-form">
+  <h3>Kirim Pesan</h3>
+
+  <input id="nama" type="text" placeholder="Nama Lengkap" />
+  <br><br>
+
+  <input id="email" type="email" placeholder="Email" />
+  <br><br>
+
+  <input id="wa" type="text" placeholder="Nomor WhatsApp" />
+  <br><br>
+
+  <textarea id="pesan" rows="5" placeholder="Pesan kamu..."></textarea>
+  <br><br>
+
+  <button class="send-btn" onclick="kirimWA()">Kirim</button>
+</div>
+
+  </section>
+
+  <!-- POPUP MAP -->
+<div class="popup" id="mapPopup">
+  <div class="popup-content">
+    <span class="close" onclick="closeMap()">&times;</span>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2611395683734!2d106.73712777499183!3d-6.228474293765811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14e3ddaad35%3A0xeca97d6e843a95e0!2sJl.%20Bakti%20Jaya%20Luk%20No.61%2C%20Bakti%20Jaya%2C%20Kec.%20Setu%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015416!5e0!3m2!1sid!2sid!4v1700000000000" 
+      allowfullscreen="" 
+      loading="lazy"
+      class="popup-frame">
+    </iframe>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-left">
+ 
+      <p>Solusi untuk kebutuhan desain, produksi, dan event kamu.</p>
+    </div>
+
+    <div class="footer-center">
+      <h3>Menu</h3>
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-right">
+      <h3>Kontak</h3>
+      <p><strong>Email:</strong> 
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hanakamila2007@gmail.com" 
+     target="_blank">
+     hanakamila2007@gmail.com
+  </a>
+        </p>
+
+        <p><strong>WhatsApp:</strong> 
+        <a href="https://wa.me/6282113626066" target="_blank">+62 821-1362-6066</a>
+        </p>
+      <p>Lokasi: Jl. Bakti Jaya Luk No.61, Bakti Jaya, Kec. Setu, Kota Tangerang Selatan, Banten 15416</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 DK Production. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  function kirimWA() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let wa = document.getElementById("wa").value;
+    let pesan = document.getElementById("pesan").value;
+
+    let nomorTujuan = "6282113626066"; // Nomor WA penerima
+
+    let text = 
+      "Halo, saya " + nama + "%0A" +
+      "Email: " + email + "%0A" +
+      "Nomor WA: " + wa + "%0A%0A" +
+      "Pesan:%0A" + pesan;
+
+    let url = "https://wa.me/" + nomorTujuan + "?text=" + text;
+
+    window.open(url, "_blank");
+  }
+</script>
+
+
+  <script>
+    function openMap() {
+      document.getElementById("mapPopup").style.display = "flex";
+    }
+    function closeMap() {
+      document.getElementById("mapPopup").style.display = "none";
+    }
+  </script>
+
+  <script>
+  const burger = document.getElementById("burgerBtn");
+  const navMenu = document.getElementById("navMenu");
+
+  burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      navMenu.classList.toggle("show");
+  });
+</script>
+
+</body>
+</html>
