@@ -884,6 +884,15 @@ body, html {
   width: 100%;
   overflow-x: hidden;
 }
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+img.lazy-loaded {
+  opacity: 1;
+}
  
  
 
