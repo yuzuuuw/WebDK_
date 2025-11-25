@@ -11,6 +11,13 @@ body {
   background-color: #fff;
 } 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+/* Header */
 header {
   width: 100%;
   padding: 15px 40px;
@@ -19,12 +26,11 @@ header {
   align-items: center;
   background: #ffffff;
   color: #333;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-
- 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);   /* 🔥 BAYANGAN */
   top: 0 !important;
   z-index: 9999 !important;
 }
+
 
 .logo img {
   height: 40px;
@@ -48,6 +54,15 @@ nav a.active {
 
 nav a:hover {
   color: #d37b00;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white; /* atau warna header kamu */
 }
 
 /* ===== PRODUCT SECTION ===== */
@@ -147,6 +162,84 @@ nav a:hover {
   color: #ffb347;
 }
 
+.gallery-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* DESKTOP */
+.gallery-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slider-container {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.slider-item {
+    flex: 0 0 calc(33.33% - 10px); /* 3 foto */
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =======================
+    📱 RESPONSIVE MOBILE
+   ======================= */
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        width: 90%;
+    }
+
+    .slider-item {
+        flex: 0 0 100%;  /* 1 foto per slide */
+        height: 200px;  /* bisa kamu atur */
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper iframe {
+    width: 70%;
+    height: 400px;
+    border-radius: 15px;
+}
+
+/* versi mobile */
+@media (max-width: 600px) {
+    .video-wrapper iframe {
+        width: 90%;
+        height: 220px;
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 850px) {
@@ -162,23 +255,12 @@ nav a:hover {
   }
 }
 
-
-.product {
-  min-height: 100vh; /* biar bisa lebih tinggi dari layar */
-}
-
-
- 
-
-/* FOOTER */
 .footer {
-  background: #6f6e6e;
-  color: #eee;
+  width: 100%;
+  margin-top: 80px;
   padding: 50px 5% 20px;
-  margin-top: 60px;
-  box-shadow: 0 -3px 10px rgba(0,0,0,0.12);  /* 🔥 BAYANGAN ATAS */
+  background: #6f6e6e;
 }
-
 
 .footer-container {
   display: flex;
@@ -326,7 +408,7 @@ nav a:hover {
 
   /* PRODUCTS RESPONSIVE */
   .product {
-    padding: 90px 25px;
+    padding: 100px 25px;
   }
 
   .product h2 {
@@ -343,13 +425,15 @@ nav a:hover {
 
   /* FOOTER */
   .footer {
-    padding: 40px 25px;
+    margin-top: 85px;
   }
 
   .footer-container {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    padding: 0;
+    width: 100%;
   }
 
   .footer-bottom {
@@ -508,115 +592,21 @@ body, html {
   width: 100%;
   overflow-x: hidden;
 }
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: white; /* atau warna header kamu */
-}
- 
-.gallery-section {
-    padding: 50px 60px;
-    background: #fff;
+
+
+/* HILANGKAN SPACE BAWAH YANG NGANGGUR */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* === FIX WARNA INTERIOR, KONSTRUKSI, EVENT === */
-.kategori-title {
-    color: #ff7a00 !important;   /* ORANGE */
+.hero,
+.about,
+.product {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-.gallery-category h3 {
-    color: #ff7a00 !important;   /* ORANGE */
+footer, .footer {
+  margin-bottom: 0 !important;
 }
-
-
-.gallery-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #333;
-}
-
-.gallery-category {
-    margin-bottom: 40px;
-}
-
-.gallery-category h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #ff6a00;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.gallery-grid img,
-.gallery-grid video {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-.kategori-title {
-    margin: 40px 0 15px;
-    font-size: 22px;
-    color: #ff7a00;
-    font-weight: bold;
-}
-
-/* === SLIDER SUPER SMOOTH TANPA LAG === */
-.slider-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-
-    /* Smooth scroll */
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    /* Bantu performa */
-    will-change: scroll-position;
-}
-
-/* Scrollbar lebih ringan */
-.slider-container::-webkit-scrollbar {
-    height: 6px;
-}
-.slider-container::-webkit-scrollbar-thumb {
-    background: #bbb;
-    border-radius: 8px;
-}
-
-/* ITEM */
-.slider-item {
-    min-width: 330px;
-    height: 220px;
-    border-radius: 15px;
-    overflow: hidden;
-    scroll-snap-align: start;
-
-    /* Hilangkan shadow berat */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-
-    /* PERBAIKAN LAG — aktifkan GPU */
-    transform: translateZ(0);
-    will-change: transform;
-}
-
-/* GAMBAR & VIDEO */
-.slider-item img,
-.slider-item video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-
-}
-
-
-
